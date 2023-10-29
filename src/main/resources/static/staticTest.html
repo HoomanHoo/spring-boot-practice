@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		Static Test 입니다<br>
+		URL = http://localhost:8080/staticTest.html<br>
+		Path = resources/static/staticTest.html<br>
+		
+	<br>
+	<br>
+	정적 파일 서빙하는 기본적인 기능<br>
+	Tomcat(WAS)에서 http://localhost:8080/staticTest.html 을 분석<br>
+	staticTest.html은 Spring Container 에 Mapping된 Controller가 없음<br>
+	(Request된 Resource의 탐색에 있어서 Spring Controller가 우선권을 가짐)<br>
+	이후 resources/static 경로에서 매칭되는 파일이 있는지 탐색<br>
+	있다면 return, 없다면 404 not found 에러 발생<br>
+	<a href="http://localhost:8080/staticNotFound.html">http://localhost:8080/staticNotFound.html</a>
+	<br>
+	위 링크 접속 시  하기의 HTML 출력<br>
+	<h1>Whitelabel Error Page</h1>
+        <p>This application has no explicit mapping for /error, so you are seeing this as a fallback.</p>
+        <div id='created'>Sun Oct 29 22:37:57 KST 2023</div>
+        <div>There was an unexpected error (type=Not Found, status=404).</div>
+
+</body>
+</html>

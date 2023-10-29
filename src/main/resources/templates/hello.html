@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Hellllllllllo</title>
+</head>
+<body>
+	<p th:text="'안녕하세요 '+ ${data}">안녕하세요 손님</p> 
+	<!-- th:text="${model attribute name}" 은 controller 에서 Model 객체에 담은
+		attribute name의 value를 표시한다 -->
+	<input type="text" name="inputValue" th:value="${inputValue}">
+	<!-- input tag에서 value값에 server side rendering된 값을 넣고 싶을 경우 th:value를 사용한다-->
+</body>
+</html>

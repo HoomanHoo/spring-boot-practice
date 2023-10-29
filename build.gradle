@@ -1,0 +1,40 @@
+plugins {
+	id 'java'	//개발 언어 설정
+	id 'org.springframework.boot' version '3.1.5'	//spring version 설정
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'	//java version 지정
+	/*
+sourceCompatibility란?
+
+sourceCompatibility란 Java 버전과 일치하는 값으로 컴파일에서 사용하는 JDK 버전입니다.
+소스 코드에서 사용할 수 있는 Java 버전을 해당 버전 값으로 제한 합니다.
+컴파일 단계에서 에러를 감지하여, 실수로 더 높은 버전의 Java 기능을 사용하는 것을 방지합니다.
+
+sourceCompatibility와 유사한 targetCompatibility 기능이 있습니다.
+
+targetCompatibility는 생성된 클래스 파일의 버전을 제어합니다.
+프로그램에서 실행할 수 있는 가장 낮은 Java 버전을 의미합니다.
+여기에서 정한 버전 이상의 Java 버전을 사용해야 하며, 마찬가지로 컴파일 단계에서 에러를 감지합니다.
+
+	*/
+}
+
+repositories {
+	mavenCentral()	//라이브러리 레포지터리 설정
+}
+
+dependencies {	//추가할 라이브러리 목록
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
