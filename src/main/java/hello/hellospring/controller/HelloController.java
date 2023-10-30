@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import helloPractice.Hello;
-import main.java.helloPractice.HelloSell;
+import helloPractice.HelloSell;
 
 /*
  * Controller는 Http Request가 Web Application 레벨에서 가장 처음 진입하는 곳이다 

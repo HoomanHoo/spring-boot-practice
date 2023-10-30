@@ -36,6 +36,16 @@
 - build 완료 후 프로젝트 루트 경로/build/libs 경로로 이동
 - settings.gradle에 등록된 rootProject.name + build.gradle에 등록된 version.jar 파일이 생성되었는지 확인
 - java -jar 파일명.jar 혹은 jdk 경로\bin\java.exe -jar 파일명.jar 실행
+
+# Controller, Service, Repository
+- Controller
+  - URL을 Mapping한다
+  - Mapping된 URL로 HTTP Request가 들어오면 해당 Request를 받아 실행한다
+- Service
+  - 비즈니스 로직을 구현한다
+- Repository
+  - DB에 접근하여 데이터를 생성, 저장, 업데이트, 삭제한다
+
   
   
 

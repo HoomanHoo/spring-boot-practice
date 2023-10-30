@@ -1,4 +1,4 @@
-package main.java.helloPractice;
+package helloPractice;
 
 public class HelloSell {
     private int price;
