@@ -8,13 +8,15 @@ import org.springframework.stereotype.Service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
+import jakarta.transaction.Transactional;
 
-//@Service // Service 어노테이션을 통해 Spring Container에 Spring Bean으로 등록한다
+@Transactional // JPA를 사용하기 위해 Transaction을 생성해주어야 해서 붙여준다
+// @Service // Service 어노테이션을 통해 Spring Container에 Spring Bean으로 등록한다
 public class MemberService {
 
     private final MemberRepository memberRepository; // = new MemoryMemberRepository();
 
-    // @Autowired
+    // @Autowired // 주입받을 객체가 하나이며 final 타입인 경우 생략 가능
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

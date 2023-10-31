@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 
 import hello.hellospring.domain.Member;
 
+// 메모리에 데이터를 적재함 - 서버 어플리케이션이 꺼지면 데이터가 다 삭제됨
+
 //@Repository // Repository 어노테이션을 통해 Spring Container에 Spring Bean으로 등록한다
 public class MemoryMemberRepository implements MemberRepository {
 
