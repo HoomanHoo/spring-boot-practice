@@ -27,6 +27,9 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
+        // memberService = class hello.hellospring.service.MemberService$$SpringCGLIB$$0
+        // cglib 이라는 라이브러리로 프록시 객체를 생성한다
     }
     // 2. 필드 주입 방식 - 주입된 객체를 불변 상태로 만들 수 없다 (final 키워드 선언 불가 - 생성 시점에 초기화되지 않기 때문)
     // Spring 밖에서 작동하지 않는다,

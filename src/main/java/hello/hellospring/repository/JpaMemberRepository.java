@@ -48,10 +48,8 @@ public class JpaMemberRepository implements MemberRepository {
         return result;
 
         /*
-         * 여러개의 row를 조회해야할 경우 JPQL을 작성해야한다
-         */
-
-        /*
+         * 여러개의 row를 조회해야할 경우 JPQL(Java Persistence Query Language)을 작성해야한다
+         * 
          * "select m from Member m"는 JPQL이라는 쿼리로, 객체를 대상으로 쿼리를 날린다
          * 날린 쿼리는 SQL문으로 번역이 된다
          * "select m from Member m" - 소문자 m은 alias이며
